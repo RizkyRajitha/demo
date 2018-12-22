@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const hbs = require("hbs");
+const bootstrap = require('bootstrap')
 
 //express middleware
 
@@ -23,10 +24,6 @@ app.set("view engine", "hbs");
 hbs.registerPartials(__dirname + "/views/partials");
 
 
-
-app.get("/", (req, res) => {
-  res.send("<h1> hello express</h1>");
-});
 
 app.get("/home", (req, res) => {
   res.render("home.hbs", {
