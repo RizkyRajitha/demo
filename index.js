@@ -11,8 +11,10 @@ const hbs = require("hbs");
   
 //   const dt = new Date
 //   console.log(req.method,req.url,dt)
-+
+
 // })
+
+const port  = process.env.PORT || 3000 ;
 
 
 app.use(express.static(__dirname + "/public"));
@@ -41,6 +43,6 @@ app.get("/games", (req, res) => {
   res.render('games')
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("server is up and running on port 3000 ...");
 });
