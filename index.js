@@ -1,32 +1,25 @@
 const express = require("express");
 const app = express();
 const hbs = require("hbs");
+//const bootstrap = require('bootstrap')
 
 //express middleware
 
-
 // app.use((req,res,next) => {
-  
+
 //   res.send('<html> <head> <h1> site is in maintenance . sorry for your inconveniance </h1>  </head>  </html>  ')
-  
+
 //   const dt = new Date
 //   console.log(req.method,req.url,dt)
 
 // })
 
-const port  = process.env.PORT || 3000 ;
-
+const port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + "/public"));
 //express view engine
 app.set("view engine", "hbs");
 hbs.registerPartials(__dirname + "/views/partials");
-
-
-
-app.get("/", (req, res) => {
-  res.send("<h1> hello express</h1>");
-});
 
 app.get("/home", (req, res) => {
   res.render("home.hbs", {
@@ -40,7 +33,12 @@ app.get("/about", (req, res) => {
 });
 
 app.get("/games", (req, res) => {
-  res.render('games')
+  res.render("games");
+});
+
+app.get("/projects", (req, res) => {
+  res.render("projects");
+  //console.log(req)
 });
 
 app.listen(port, () => {
