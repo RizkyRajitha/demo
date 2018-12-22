@@ -1,0 +1,16 @@
+{
+  "name": "xpress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.0",
+    "pug": "^2.0.3"
+  }
+}
